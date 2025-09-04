@@ -249,7 +249,7 @@ export class Dragon implements IDragon {
       /* istanbul ignore next */
       if (isRGL) {
         // 禁止被拖拽元素的阻断
-        const nodeInst = dragObject.nodes[0].getDOMNode();
+        const nodeInst = dragObject.nodes?.[0]?.getDOMNode();
         if (nodeInst && nodeInst.style) {
           this.nodeInstPointerEvents = true;
           nodeInst.style.pointerEvents = 'none';
